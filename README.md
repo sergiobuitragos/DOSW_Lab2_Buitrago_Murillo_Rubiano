@@ -1,2 +1,2 @@
-# DOSW_Lab2_Buitrago_Murillo_RubianoDOSW_Lab1_Buitrago_Murillo_Rubiano
+# DOSW_Lab2_Buitrago_Murillo_Rubiano
 Lab2 de DOSW
