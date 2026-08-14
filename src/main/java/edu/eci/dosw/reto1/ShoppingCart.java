@@ -6,7 +6,7 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- * Represents a shopping cart 
+ * Represents a shopping cart
  * Uses Java Streams to calculate totals
  */
 public final class ShoppingCart {
