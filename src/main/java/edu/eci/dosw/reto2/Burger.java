@@ -17,7 +17,7 @@ public class Burger {
      * @param ingredients
      */
     public Burger(List<Ingredient> ingredients) {
-        this.ingredients = ingredients;
+        this.ingredients = List.copyOf(ingredients); //immutable
     }
 
     /**
