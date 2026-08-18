@@ -1,106 +1,51 @@
 package edu.eci.dosw.reto3;
 
 /**
- * tiene la informacion de los vehiculos
- * familia, precio, etc
+ * Represents a vehicle of the catalog. Abstract class: each family provides its own subclass.
  */
-public class Vehicle {
-
-    private final String family;
+public abstract class Vehicle{
     private final String category;
     private final String model;
     private final double maxSpeed;
     private final double price;
-    private final String specialEquipment;
+    private final String equipment;
 
-    /**
-     * construye un vehiculo con la informacion dada
-     *
-     * @param family
-     * @param category
-     * @param model
-     * @param maxSpeed
-     * @param price
-     * @param specialEquipment
-     */
-    public Vehicle(
-            String family,
-            String category,
-            String model,
-            double maxSpeed,
-            double price,
-            String specialEquipment) {
-
-        this.family = family;
+    protected Vehicle(String category, String model, double maxSpeed, double price, String equipment) {
         this.category = category;
         this.model = model;
         this.maxSpeed = maxSpeed;
         this.price = price;
-        this.specialEquipment = specialEquipment;
+        this.equipment = equipment;
     }
 
-    /**
-     * Nos da la familia del vehiculo
-     * @return
-     */
-    public String getFamily() {
-        return family;
-    }
+    public abstract String getFamily();
 
-    /**
-     * nos da la categoria
-     *
-     * @return
-     */
-    public String getCategory() {
-        return category;
-    }
-
-    /**
-     * nos da el modelo
-     *
-     * @return
-     */
-    public String getModel() {
+    public String getModel(){
         return model;
     }
 
-    /**
-     * nos da la velocidad
-     *
-     * @return
-     */
-    public double getMaxSpeed() {
+    public String getCategory(){
+        return category;
+    }
+
+    public double getMaxSpeed(){
         return maxSpeed;
     }
 
-    /**
-     * nos da el precio
-     *
-     * @return
-     */
-    public double getPrice() {
+    public double getPrice(){
         return price;
     }
 
-    /**
-     * nos da el equipo especial
-     *
-     * @return
-     */
-    public String getSpecialEquipment() {
-        return specialEquipment;
+    public String getEquipment(){
+        return equipment;
     }
 
-    /**
-     * muestra la info
-     */
-    public void showInfo() {
-        System.out.println("Tipo: " + family);
-        System.out.println("Categoría: " + category);
-        System.out.println("Modelo: " + model);
-        System.out.println("Velocidad máxima: " + maxSpeed + " km/h");
-        System.out.println("Precio: $" + price);
-        System.out.println("Equipo especial: " + specialEquipment);
+    public void showInfo(){
+        System.out.println("Type: " + getFamily());
+        System.out.println("Category: " + category);
+        System.out.println("Model: " + model);
+        System.out.println("Maximum Speed: " + maxSpeed + " km/h");
+        System.out.println("Price: $" + price);
+        System.out.println("Special Equipment: " + equipment);
     }
 }
