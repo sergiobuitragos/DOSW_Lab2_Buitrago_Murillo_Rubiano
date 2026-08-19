@@ -1,5 +1,9 @@
 package edu.eci.dosw.reto6;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Collections;
+
 /**
  * clase que representa el ticket de soporte
  */
@@ -11,6 +15,8 @@ public class Ticket {
 
     private String resolvedBy;
     private boolean resolved;
+
+    private final List<String> attemptedTechnicians = new ArrayList<>();
 
     /**
      * crea un ticket
@@ -25,17 +31,17 @@ public class Ticket {
 
         if (description == null || description.isBlank()) {
             throw new IllegalArgumentException(
-                    "La descripcion no puede estar vacia");
+                    "Description cannot be null");
         }
 
         if (difficulty == null) {
             throw new IllegalArgumentException(
-                    "La dificultad no puede ser null");
+                    "Difficulty cannot be null");
         }
 
         if (priority == null) {
             throw new IllegalArgumentException(
-                    "La prioridad no puede ser null");
+                    "priority caannot be null");
         }
 
         this.description = description;
@@ -73,7 +79,7 @@ public class Ticket {
 
         if (technicianName == null || technicianName.isBlank()) {
             throw new IllegalArgumentException(
-                    "El nombre del tecnico no puede estar vacio");
+                    "Technician name cannot be empty");
         }
 
         this.resolved = true;
@@ -87,4 +93,17 @@ public class Ticket {
         this.resolved = false;
         this.resolvedBy = null;
     }
+
+    public void addAttempt(String technicianName){
+        if(technicianName == null || technicianName.isBlank()){
+            throw new IllegalArgumentException(
+                    "Technician name cannot be empty");
+        }
+        attemptedTechnicians.add(technicianName);
+    }
+
+    public List<String> getAttemptedTechnicians() {
+        return Collections.unmodifiableList(attemptedTechnicians);
+    }
+    //con eso dice directamente si pasó por mas de un tecnico si .size() es mayor a 1
 }
