@@ -2,15 +2,19 @@ package edu.eci.dosw.reto5;
 /**
  * es la clase caramelo como ingrediente
  */
-public class Caramel implements Ingredient {
+public final class Caramel extends Topping {
+
+    public Caramel(Coffee coffee){
+        super(coffee);
+    }
 
     @Override
-    public String getName() {
-        return "Caramelo";
+    public String getDescription() {
+        return coffee.getDescription() + "+ Caramel";
     }
 
     @Override
     public double getPrice() {
-        return 1200;
+        return coffee.getPrice() + 1200;
     }
 }

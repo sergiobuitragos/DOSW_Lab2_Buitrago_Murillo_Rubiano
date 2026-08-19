@@ -3,7 +3,7 @@ package edu.eci.dosw.reto5;
 /**
  * clase que representa el ingrediente escogido
  */
-public class CustomIngredient implements Ingredient {
+public class CustomTopping extends Topping {
 
     private final String name;
     private final double price;
@@ -13,16 +13,16 @@ public class CustomIngredient implements Ingredient {
      * @param name
      * @param price
      */
-    public CustomIngredient(String name, double price) {
-
+    public CustomTopping(Coffee coffee, String name, double price) {
+        super(coffee);
         if (name == null || name.isBlank()) {
             throw new IllegalArgumentException(
-                    "El nombre no puede estar vacio,escoge uno");
+                    "Name cannot be null, please choose a name");
         }
 
         if (price < 0) {
             throw new IllegalArgumentException(
-                    "El precio no puede ser negativo");
+                    "Price cannot be negative");
         }
 
         this.name = name;
@@ -30,12 +30,12 @@ public class CustomIngredient implements Ingredient {
     }
 
     @Override
-    public String getName() {
-        return name;
+    public String getDescription() {
+        return coffee.getDescription() + " + " + name;
     }
 
     @Override
     public double getPrice() {
-        return price;
+        return coffee.getPrice() + price;
     }
 }

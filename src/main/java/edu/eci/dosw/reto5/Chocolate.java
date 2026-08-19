@@ -2,15 +2,19 @@ package edu.eci.dosw.reto5;
 /**
  * es la clase chocolate como ingrediente
  */
-public class Chocolate implements Ingredient {
+public final class Chocolate extends Topping {
 
+    public Chocolate(Coffee coffee){
+        super(coffee);
+    }
+    
     @Override
-    public String getName() {
-        return "Chocolate";
+    public String getDescription() {
+        return coffee.getDescription() + "+ Chocolate";
     }
 
     @Override
     public double getPrice() {
-        return 1500;
+        return coffee.getPrice() + 1500;
     }
 }

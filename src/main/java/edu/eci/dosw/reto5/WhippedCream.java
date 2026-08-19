@@ -3,15 +3,19 @@ package edu.eci.dosw.reto5;
 /**
  * es la clase crema batida como ingrediente
  */
-public class WhippedCream implements Ingredient {
+public final class WhippedCream extends Topping {
+
+    public WhippedCream(Coffee coffee){
+        super(coffee);
+    }
 
     @Override
-    public String getName() {
-        return "Crema batida";
+    public String getDescription() {
+        return coffee.getDescription() + "+ Whipped Cream";
     }
 
     @Override
     public double getPrice() {
-        return 2000;
+        return coffee.getPrice() + 2000;
     }
 }
