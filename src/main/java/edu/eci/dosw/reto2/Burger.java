@@ -56,5 +56,6 @@ public class Burger {
 
         System.out.println();
         System.out.println("Final price: $" + calculatePrice());
+
     }
 }
