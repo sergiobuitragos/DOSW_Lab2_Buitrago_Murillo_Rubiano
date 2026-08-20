@@ -3,7 +3,7 @@ package edu.eci.dosw.reto1;
 import java.math.BigDecimal;
 
 /**
- * clase cliente y la estrategia de descuento
+ * Represents a customer and their discount strategy.
  */
 public final class Customer {
 
@@ -12,6 +12,7 @@ public final class Customer {
 
     /**
      * crea clientes
+     * 
      * @param name
      * @param discountStrategy
      */
@@ -21,12 +22,12 @@ public final class Customer {
 
         if (name == null || name.isBlank()) {
             throw new IllegalArgumentException(
-                    "el nombre no puede ser null");
+                    "Customer name cannot be null or blank.");
         }
 
         if (discountStrategy == null) {
             throw new IllegalArgumentException(
-                    "la estrategia de descuento no puede ser null");
+                    "Discount strategy cannot be null.");
         }
 
         this.name = name;
@@ -42,7 +43,8 @@ public final class Customer {
     }
 
     /**
-     * cambia la estrategia de los descuentos
+     * Changes the customer's discount strategy at runtime.
+     * 
      * @param discountStrategy
      */
     public void setDiscountStrategy(
@@ -50,7 +52,7 @@ public final class Customer {
 
         if (discountStrategy == null) {
             throw new IllegalArgumentException(
-                    "la estrategia de descuento no puede ser null");
+                    "Discount strategy cannot be null.");
         }
 
         this.discountStrategy = discountStrategy;
@@ -58,6 +60,7 @@ public final class Customer {
 
     /**
      * calcula el descuento usando la estrategia de descuento
+     * 
      * @param subtotal
      * @return
      */
