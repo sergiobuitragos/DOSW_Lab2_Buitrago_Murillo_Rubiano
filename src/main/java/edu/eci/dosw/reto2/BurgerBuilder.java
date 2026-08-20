@@ -4,18 +4,22 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Builder hace la hamburguesa paso a paso
- * hace la hamburguesa con build()
+ * Builds a burger step by step by accumulating its ingredients before creating
+ * the final burger instance with {@link #build()}.
  */
 public class BurgerBuilder {
 
+    /**
+     * The list of ingredients that will form the burger.
+     */
     private final List<Ingredient> ingredients = new ArrayList<>();
 
     /**
-     * pone el pan a la hamburguesa
-     * @param name
-     * @param price 
-     * @return
+     * Adds the bread to the burger being constructed.
+     *
+     * @param name  the bread name
+     * @param price the bread price
+     * @return this builder instance to allow method chaining
      */
     public BurgerBuilder withBread(String name, double price) {
         ingredients.add(new Ingredient(name, price));
@@ -23,10 +27,11 @@ public class BurgerBuilder {
     }
 
     /**
-     * pone la carne
-     * @param name
-     * @param price
-     * @return
+     * Adds the meat to the burger being constructed.
+     *
+     * @param name  the meat name
+     * @param price the meat price
+     * @return this builder instance to allow method chaining
      */
     public BurgerBuilder withMeat(String name, double price) {
         ingredients.add(new Ingredient(name, price));
@@ -34,10 +39,11 @@ public class BurgerBuilder {
     }
 
     /**
-     * pone un ingrediente a la hamburguesa.
-     * @param name
-     * @param price
-     * @return
+     * Adds a generic ingredient to the burger.
+     *
+     * @param name  the ingredient name
+     * @param price the ingredient price
+     * @return this builder instance to allow method chaining
      */
     public BurgerBuilder addIngredient(String name, double price) {
         ingredients.add(new Ingredient(name, price));
@@ -45,8 +51,10 @@ public class BurgerBuilder {
     }
 
     /**
-     * hace la amburguesa
-     * @return
+     * Creates and returns the finished burger with all added ingredients.
+     *
+     * @return a new burger instance containing a copy of the accumulated
+     *         ingredients
      */
     public Burger build() {
         return new Burger(new ArrayList<>(ingredients));
