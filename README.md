@@ -20,7 +20,7 @@ Adicionalmente, en la clase `Main` se realizó directamente el ejemplo planteado
 
 **Estado actual del reto:** todos los requisitos funcionales y de diseño establecidos para el desafío se encuentran cumplidos.
 
-![Output del Reto 1]!(image.png)
+![Output Reto 1](image-2.png)
 
 En cuanto a las preguntas puntuales del reto:
 
