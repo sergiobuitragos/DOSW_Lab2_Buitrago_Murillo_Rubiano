@@ -74,6 +74,24 @@ Utilizamos menos clases y consideramos que implementar el Director y una interfa
 <img width="837" height="275" alt="image" src="https://github.com/user-attachments/assets/0c6e4fb1-6ba4-415c-a777-0d68a882958c" />
 
 
+Desarrollo del desafio N°3
+### Desafío 3: Implementación del patrón Factory 
+
+Utilizamos el patrón Factory porque el sistema necesita crear distintos tipos de vehículos (Land, Water, Air) sin que el código cliente (Dealership) conozca las clases concretas ni la lógica de construcción de cada uno. Cada familia tiene su propia lógica de especificaciones (velocidad, precio, equipo) según la categoría y el modelo, por lo que delegar la creación a una clase especializada por familia evita condicionales extensos y centraliza el conocimiento de cada catálogo.
+
+¿Cómo lo aplicamos?
+
+Se definió la interfaz VehicleFactory con el método createVehicle(category, model). Cada familia tiene su implementación concreta (LandVehicleFactory, WaterVehicleFactory, AirVehicleFactory), cada una con su propia tabla de especificaciones (VehicleSpec). VehicleFactoryProvider selecciona la factory correcta según la familia solicitada y delega la creación, devolviendo siempre el tipo abstracto Vehicle. El cliente (Dealership) solo interactúa con VehicleFactoryProvider, sin conocer las clases concretas.
+
+**Imegenes que muestran que si fumciona**
+
+<img width="431" height="316" alt="image" src="https://github.com/user-attachments/assets/de28f460-530f-4b57-8b43-4f90f1aee14d" />
+<img width="506" height="206" alt="image" src="https://github.com/user-attachments/assets/c06b660c-8420-42e1-af62-61485791da51" />
+
+**Pruebas**
+
+
+
 
 
     
