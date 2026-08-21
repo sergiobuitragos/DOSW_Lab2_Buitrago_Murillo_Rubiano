@@ -9,6 +9,8 @@ public class Application {
         System.out.println("Maven project configured and running correctly.");
         Reto1.run();
         Reto2.run();
+        // Ejecuta la demo del reto3
+        edu.eci.dosw.reto3.Main.main(args);
     }
 
 }
