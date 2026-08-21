@@ -90,6 +90,10 @@ Se definió la interfaz VehicleFactory con el método createVehicle(category, mo
 
 **Pruebas**
 
+<img width="912" height="312" alt="image" src="https://github.com/user-attachments/assets/3eda29ba-04a0-4948-8330-1820f72c2dd8" />
+
+Desarrollo del desafio N°4
+### Desafío 4: Implementación del patrón Strategy
 
 
 
