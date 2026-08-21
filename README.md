@@ -108,9 +108,6 @@ Desarrollo del desafio N°4
 ![Reto 4:](image.png)
 
 
-Desarrollo del desafio N°5
-
-
 Desarrollo del desafio N°6
 
 **Design Pattern Category:** Behavioral
@@ -139,7 +136,10 @@ Coffee es la interfaz común (component) con getDescription() y getPrice(). Norm
 **Pruebas**
 <img width="894" height="298" alt="image" src="https://github.com/user-attachments/assets/b33fcc7d-d8fb-4231-9038-5394fda8caa3" />
 
-
+No se pudo completar la totalidad del laboratorio dentro del tiempo disponible.
+Priorizamos dejar cada reto entregado con: código funcional, principio de
+diseño correctamente justificado y, cuando fue posible, pruebas automatizadas —
+en vez de dejar los 8 retos a medio terminar sin ninguno realmente sólido
 
 
     
