@@ -12,7 +12,9 @@ public class Application {
         Reto1.run();
         Reto2.run();
         // Ejecuta la demo del reto3
-        edu.eci.dosw.reto3.Main.main(args);
+        // Reto3 (Dealership) requiere input interactivo por teclado.
+        // Ejecutar manualmente: edu.eci.dosw.reto3.Main
+        // edu.eci.dosw.reto3.Main.main(args);
         Reto4.run();
         // Ejecuta la demo del reto5
         edu.eci.dosw.reto5.Main.main(args);
