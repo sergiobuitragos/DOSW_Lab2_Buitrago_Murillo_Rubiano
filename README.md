@@ -93,8 +93,19 @@ Se definió la interfaz VehicleFactory con el método createVehicle(category, mo
 <img width="912" height="312" alt="image" src="https://github.com/user-attachments/assets/3eda29ba-04a0-4948-8330-1820f72c2dd8" />
 
 Desarrollo del desafio N°4
-### Desafío 4: Implementación del patrón Strategy
 
+**Design Pattern Category:** Behavioral
+
+**Pattern Used:** Strategy
+
+**Justification:** Cada par de monedas requiere una tasa de conversión distinta. Strategy permite intercambiar el algoritmo de conversión sin modificar el código cliente.
+
+**How It Was Applied:** ExchangeRateStrategy define el contrato de conversión, FixedExchangeRateStrategy lo implementa con una tasa fija por par de monedas. ExchangeRateProvider selecciona la estrategia correcta según origen/destino. CurrencyConverter usa la estrategia sin conocer los detalles de cálculo (Dependency Inversion).
+
+**Streams:** CurrencyConverter.totalConvertedByCurrency() usa Collectors.groupingBy + Collectors.summingDouble para acumular totales por moneda destino, cumpliendo el requisito explícito de "grouped or accumulated" del enunciado.
+
+**Evidencia**
+![Reto 4:](image.png)
 
 
 
