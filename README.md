@@ -122,5 +122,24 @@ Desarrollo del desafio N°6
 
 **Evidencia**
 ![Reto 6 Evidencia](image.png)
-    
+
+Desarrollo del desafio N°5
+### Desafío 5: Implementación del patrón Collector
+
+Usamos este patrón porque el reto exige poder agregar nuevos toppings (Milk, Chocolate, Caramel, Whipped Cream, Mint, CustomTopping) sin modificar la clase base del café (NormalCoffee), y permitir combinar cualquier número de ellos sobre un mismo café. Además, permite envolver un objeto (Coffee) en otros objetos con la misma interfaz, añadiendo comportamiento (precio y descripción) de forma dinámica.
+¿Cómo lo aplicamos?
+
+Coffee es la interfaz común (component) con getDescription() y getPrice(). NormalCoffee es el componente concreto (café base sin toppings). Topping es el decorador abstracto: implementa Coffee, envuelve una referencia a otro Coffee y valida que no sea nulo. Cada topping concreto (Milk, Chocolate, Caramel, WhippedCream, Mint, CustomTopping) extiende Topping y sobrescribe getDescription()/getPrice(), delegando al coffee envuelto y sumando su propio aporte. Así, en Main.java, cada vez que el usuario elige un topping, se envuelve el café actual (coffee = new Milk(coffee), etc.), permitiendo apilar cualquier número de toppings sin tocar NormalCoffee ni las clases de otros toppings.
+
+** Imagen de funcionamiento **
+
+<img width="376" height="295" alt="image" src="https://github.com/user-attachments/assets/13f21bc9-1e60-452e-84cb-f2cdb0526422" />
+<img width="518" height="267" alt="image" src="https://github.com/user-attachments/assets/4961ea94-d43f-4224-adaf-267ff4282b17" />
+
+**Pruebas**
+<img width="894" height="298" alt="image" src="https://github.com/user-attachments/assets/b33fcc7d-d8fb-4231-9038-5394fda8caa3" />
+
+
+
+
     
