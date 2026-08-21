@@ -3,6 +3,7 @@ package edu.eci.dosw;
 import edu.eci.dosw.reto1.Reto1;
 import edu.eci.dosw.reto2.Reto2;
 import edu.eci.dosw.reto4.Reto4;
+import edu.eci.dosw.reto6.Reto6;
 
 public class Application {
 
@@ -15,6 +16,7 @@ public class Application {
         Reto4.run();
         // Ejecuta la demo del reto5
         edu.eci.dosw.reto5.Main.main(args);
+        Reto6.run();
     }
 
 }
