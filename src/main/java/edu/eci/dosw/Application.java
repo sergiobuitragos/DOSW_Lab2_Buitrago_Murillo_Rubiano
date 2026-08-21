@@ -13,6 +13,9 @@ public class Application {
         // Ejecuta la demo del reto3
         edu.eci.dosw.reto3.Main.main(args);
         Reto4.run();
+        // Ejecuta la demo del reto5
+        edu.eci.dosw.reto5.Main.main(args);
     }
 
 }
+
