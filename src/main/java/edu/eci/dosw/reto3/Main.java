@@ -8,7 +8,11 @@ public final class Main {
         Dealership dealership = new Dealership(scanner);
         dealership.run();
 
+        PurchaseSummary summary = new PurchaseSummary(dealership.getSelectedVehicles());
+        double subtotal = summary.calculateSubtotal();
+
         System.out.println("\nVehículos seleccionados: " + dealership.getSelectedVehicles().size());
+        System.out.println("Subtotal: $" + subtotal);
 
     }
 }
