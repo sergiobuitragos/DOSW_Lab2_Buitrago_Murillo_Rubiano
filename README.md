@@ -43,6 +43,38 @@ El código de Customer es el mismo siempre, pero el comportamiento cambia según
     Todos los atributos de todas las clases son private
  4. **Inmutabilidad:**
 Product es una clase final con atributos final y sin setters. Una vez creado un producto con new Product("nombre", precio), ese precio no se puede cambiar nunca. Si necesitan un producto con otro precio, tienemos que crear un Product nuevo, no modificar el existente.
-    
+
+
+Desarrollo del desafio N°2
+### Desafío 2: Implementación del patrón creacional Builder
+Se utilizó el patrón creacional Builder porque el reto exige construir una hamburguesa personalizada paso a paso, es decir, tener una cantidad dada de variables independientes y opcionales (pan, carne, queso, vegetales y salsas).
+
+Este patrón nos ayuda a separar lo complejo de la construcción (crear el objeto hamburguesa) de lo que es su presentación final, permitiéndonos ensamblar el objeto incrementalmente sin necesidad de un constructor con múltiples parámetros.
+
+Lo implementamos de la siguiente manera:
+
+BurgerBuilder mantiene una lista interna de Ingredient y expone métodos encadenables (withBread, withMeat, addIngredient) que retornan this, permitiendo realizar llamadas fluidas (method chaining).
+
+El método build() finaliza el proceso, creando un objeto Burger a partir de los ingredientes acumulados.
+
+La clase Cliente actúa como quien dirige la construcción (Main), seleccionando ingredientes de un catálogo predefinido y orquestando las llamadas al builder paso a paso.
+
+Adicionalmente, usamos un Fluent Builder, que es una versión simplificada del patrón Builder clásico, sin Director ni una interfaz separada, donde el propio BurgerBuilder construye el objeto paso a paso mediante métodos encadenados.
+
+Lo utilizamos por las siguientes razones:
+
+El reto no lo necesitaba, ya que cada hamburguesa es distinta según lo que el usuario elige.
+Utilizamos menos clases y consideramos que implementar el Director y una interfaz separada sería sobreingeniería para este caso.
+
+**Imagenes de funcionamiento del reto**
+<img width="347" height="108" alt="image" src="https://github.com/user-attachments/assets/e4433306-15be-4547-a537-a726825c059a" />
+<img width="358" height="295" alt="image" src="https://github.com/user-attachments/assets/c9974fb9-3624-433f-bc3f-9d708521237b" />
+<img width="530" height="185" alt="image" src="https://github.com/user-attachments/assets/cf40424e-5743-4ef0-b60f-df9552cb9a09" />
+**pruebas exitosas**
+<img width="837" height="275" alt="image" src="https://github.com/user-attachments/assets/0c6e4fb1-6ba4-415c-a777-0d68a882958c" />
+
+
+
+
     
     
