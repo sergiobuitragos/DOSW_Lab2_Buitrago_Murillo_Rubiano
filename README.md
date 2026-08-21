@@ -108,6 +108,19 @@ Desarrollo del desafio N°4
 ![Reto 4:](image.png)
 
 
+Desarrollo del desafio N°5
 
+
+Desarrollo del desafio N°6
+
+**Design Pattern Category:** Behavioral
+**Pattern Used:** Chain of Responsibility
+**Justification:** Un ticket recorre una secuencia de técnicos sin que el cliente sepa cuál lo resuelve, cada uno decide si resolver o delegar al siguiente.
+**How It Was Applied:** TechnicalSupport centraliza la lógica común (registrar intento, verificar capacidad, resolver o delegar), BasicTechnician/IntermediateTechnician/AdvancedTechnician solo definen su especialidad. SupportChain expone un único punto de entrada.
+
+**Streams:** SupportStatistics usa groupingBy+counting (tickets por nivel), filter+count (resueltos/pendientes), y mapToInt+average (promedio de prioridad de resueltos).
+
+**Evidencia**
+![Reto 6 Evidencia](image.png)
     
     
